@@ -15,7 +15,7 @@ Not customisable as of yet.
 Relies on `os.time()` for generating a `math.randomseed()`,
 which is a potential security issue.
 
-Does not adhere to standard UNIX getopt currently.
+Adheres to UNIX `getopt` standards excluding positional arguments.
 
 See `lparse` repo for further info.
 

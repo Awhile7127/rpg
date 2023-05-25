@@ -1,10 +1,7 @@
 #!/bin/lua
 
 
-function generate_password(length, special)
-
-    -- GUARD IN CASE LENGTH NOT PROVIDED
-    length = length or 10
+function generate_password(args)
 
     -- DECLARE PASSWORD GLOBAL TO FUNCTION
     local password = ""
@@ -13,7 +10,7 @@ function generate_password(length, special)
     math.randomseed(os.time())
 
     -- GENERATE PASSWORD OF VAR LENGTH
-    for i = 1, length, 1 do
+    for i = 1, args["length"], 1 do
         local rchars = {
             string.char(math.random(65, 65 + 25)),
             string.char(math.random(65, 65 + 25)):lower(),
@@ -46,7 +43,7 @@ function main()
     local parser = require("src.parser")
     local args = parser.parse_arguments(arg, args)
 
-    local password = generate_password(args["length"], args["special"])
+    local password = generate_password(args)
     print(password)
 end
 
