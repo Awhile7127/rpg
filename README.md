@@ -27,5 +27,5 @@ lua src/rpass.lua <length> <special>
 lua src/rpass.lua --length 10 --special true
 ```
 
-length **OPTIONAL**: The length of password to generate.
-special **OPTIONAL**: Whether to include special characters.
+- length **OPTIONAL**: The length of password to generate.
+- special **OPTIONAL**: Whether to include special characters.
